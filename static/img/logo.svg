@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="33.934353mm"
+   height="33.910149mm"
+   viewBox="0 0 33.934353 33.910149"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="good-vs-bad.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.84096521"
+     inkscape:cx="155.77339"
+     inkscape:cy="428.07954"
+     inkscape:window-width="1920"
+     inkscape:window-height="1056"
+     inkscape:window-x="1200"
+     inkscape:window-y="430"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient5239"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop5237" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-40.176778,-122.1594)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;font-family:'LXGW WenKai GB Screen';-inkscape-font-specification:'LXGW WenKai GB Screen';fill:#00ffff;stroke:#ffffff;stroke-width:0.942999;stroke-opacity:1"
+       x="39.966148"
+       y="143.256"
+       id="text844"><tspan
+         sodipodi:role="line"
+         id="tspan842"
+         style="font-size:25.4px;fill:#00ffff;stroke:#ffffff;stroke-width:0.943;stroke-opacity:1"
+         x="39.966148"
+         y="143.256">优</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.8901px;font-family:'LXGW WenKai GB Screen';-inkscape-font-specification:'LXGW WenKai GB Screen';fill:#ff0000;stroke:#ffffff;stroke-width:0.849815;stroke-opacity:1"
+       x="45.182526"
+       y="171.3111"
+       id="text956"
+       transform="scale(1.1142992,0.89742504)"
+       inkscape:export-filename="优劣.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan954"
+         style="fill:#ff0000;stroke:#ffffff;stroke-width:0.849816;stroke-opacity:1"
+         x="45.182526"
+         y="171.3111">劣</tspan></text>
+  </g>
+</svg>
