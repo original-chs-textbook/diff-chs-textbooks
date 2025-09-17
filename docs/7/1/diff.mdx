@@ -1,11 +1,21 @@
 ---
-title: '春：原文 VS 教材'
-sidebar_label: '春：原文 VS 教材'
+title: '原文vs课文'
+sidebar_label: '原文vs课文'
+sidebar_position: 3
 ---
+
+:::tip
+这是【7】年级（统编版）语文，第【1】课《春》原文和课文的对比。
+:::
 
 export const MyComponent = () => (
     <div className="comparison-table">
       <table className="fc" cellSpacing="0" cellPadding="0">
+        <tr className="SectionAll">
+          <td className="TextItemSigMod"><span className="TextSegSigDiff">左</span>侧为<span className="TextSegSigDiff">原</span>文</td>
+          <td className="AlignCenter">&lt;&gt;</td>
+          <td className="TextItemSigMod"><span className="TextSegSigDiff">右</span>侧为<span className="TextSegSigDiff">课</span>文</td>
+        </tr>
       <tr className="SectionAll">
       <td className="TextItemSigMod"><span className="TextSegSigDiff">原载于朱文叔编《初中</span>语文<span className="TextSegSigDiff">读本》第1册1933年7月版</span></td>
       <td className="AlignCenter">&lt;&gt;</td>
@@ -114,7 +124,5 @@ export const MyComponent = () => (
       </table>
     </div>
 );
-
-下面是《春》这篇文章在不同版本中的文字对比：
 
 <MyComponent />

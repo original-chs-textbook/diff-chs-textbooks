@@ -5,44 +5,41 @@ slug: /
 
 # 前言
 
-Let's discover **Docusaurus in less than 5 minutes**.
+有比较才有鉴别，一经鉴别现优劣。
 
-## 山高月小，水落石出
-
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
+```
+山高月小，水落石出。
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+## 为什么发起这个项目？
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+大家好，我是`吴尚智`，是开源项目`diff-chs-textbooks`的发起人。
 
-## Start your site
+我曾是一名程序员，也是文学爱好者。年少时，我喜欢看武侠小说；不惑之年，我偏爱哲学和思辨类书籍。
 
-Run the development server:
+当我阅读孩子的语文课本时，我发现**大部分课文**页脚都有这种备注：“**选作课文时有改动**”。
 
-```bash
-cd my-website
-npm run start
+基于好奇心和批判性思维，我能提出以下问题：
+
+1. 改动了什么？
+2. 为什么要改？
+3. 是改得更好了，还是更糟了？
+
+因此，我发现了一种阅读中小学**语文课文**的方式 —— 将原文和课文进行对比。
+
+一些课文对比下来，让我大吃一惊。这些“有改动”的课文，有相当一部分是我当年学过的，我并不曾知晓这些改动。如今，我孩子继续在学。有些课后习题，要求学生背诵课文或段落，而有的教师，竟要求他们一字不差地默写，并要求“全对”（不能做到便罚抄）。我因此写了一些列批判性的文章，收录于我的公众号“井蛙惊梦人”。
+
+找课文相应的原文并不容易。尤其是小学课文，很多备注非常模糊。譬如，“本文作者琦君，选作课文时有改动”，既没有写出处或书名，更没有出版社或版次等相关信息。好在现今网络资源丰富，能找到一些书籍，而曾为程序员的经历，也让我获取资源时容易些。
+
+我曾萌生念头，想将所有改动过的课文原文找到，让孩子能看见原汁原味的文章。至少，通过对比来鉴赏文章，也是很好的学习方法。但我在现实中败下阵来，尤其是面对一些拙劣的教师时，我深感无力，我不知道这一耗时费力的工作，究竟有多少意义。
+
+2025年9月10日，查理・柯克（Charlie Kirk）在大学校园内被枪杀，这是一起悲剧，给我的触动很大。
+
+我深感时日无多，而人应该做一些有意义的事。
+
+因此，我正式发起这一项目，期待更多的人加入。
+
+
 ```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+一个人走得快，一群人走得远。
+```
