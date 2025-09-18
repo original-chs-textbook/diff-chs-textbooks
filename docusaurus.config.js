@@ -71,7 +71,7 @@ const config = {
         title: '中小学语文教材：原文与课文对比',
         logo: {
           alt: 'G.VS.B',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
           {
