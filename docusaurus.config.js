@@ -51,8 +51,8 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/original-chs-textbook/diff-chs-textbooks/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          //  'https://github.com/original-chs-textbook/diff-chs-textbooks/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: false,
         theme: {
@@ -92,16 +92,16 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: '关于项目',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'WHY',
+                to: '/',
               },
             ],
           },
           {
-            title: '公众号',
+            title: 'Docusaurus',
             items: [
               {
                 label: 'Stack Overflow',
@@ -118,7 +118,7 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: '关于我',
             items: [
               {
                 label: 'Blog',
