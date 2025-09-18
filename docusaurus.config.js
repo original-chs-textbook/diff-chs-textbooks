@@ -70,7 +70,7 @@ const config = {
       navbar: {
         title: '中小学语文教材：原文与课文对比',
         logo: {
-          alt: 'G.VS.B',
+          alt: '山水',
           src: 'img/logo.png',
         },
         items: [
@@ -95,7 +95,7 @@ const config = {
             title: '关于项目',
             items: [
               {
-                label: 'WHY',
+                label: 'WHY THIS',
                 to: '/',
               },
             ],
