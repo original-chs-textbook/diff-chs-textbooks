@@ -45,14 +45,14 @@
 
 `山高水落`的网页使用[Docusaurus](https://docusaurus.io/)构建；当前所用Docusaurus版本为`v3.8.1`。
 
-网页内嵌的`文本对比结果`基于[Beyond Compare](https://www.scootersoftware.com/)对比工具生成。
+网页内嵌的`文本对比结果`，是用[Beyond Compare](https://www.scootersoftware.com/)（v5.1.1）对比工具生成的。
 
 
 ## 获取项目
 
-倘若你想为项目做贡献，同时，又稍具编程经验（或有GitHub使用经验），最好先`fork`[山高水落](https://github.com/original-chs-textbook/diff-chs-textbooks)，然后`git clone`到本地。新增或改动后，提交到你的GitHub项目，然后申请合并。**GitHub能自动记录你的贡献**。
+倘若你想为项目做贡献，且有编程经验（或有GitHub使用经验），最好先`fork`[山高水落](https://github.com/original-chs-textbook/diff-chs-textbooks)项目，并`git clone`到本地。当你新增或改动后，提交到你的GitHub项目，然后申请合并。**GitHub能自动记录你的贡献**。
 
-倘若你只是为了本地试用，又或者，你不便参与项目，但想通过邮件等方式提交`原文图片`或`对比结果`，你可用以下方式先行测试，预览效果。
+倘若你只是为了本地试用，又或者，你不便参与项目，但愿意通过邮件等方式提交`原文图片`或`对比结果`，你可用以下方式先行测试，预览效果。
 
 1. 基本工具
 
@@ -117,7 +117,7 @@ diff-chs-textbooks/docs
 
 下面以`七年级`第`1`课为例，介绍每篇课文相应`目录`的文件组织形式。
 
-我们为项目编写了Python3脚本（若你是Windows用户，需要先安装Python3），用以创建每篇课文的目录，并生成相关文件。
+我为项目编写了Python3脚本`bc_html2mdx.py`（感谢Gemini Pro 2.5的帮助）。若你是Windows用户，需要先安装Python3。该脚本能自动化创建`指定课文`的目录，并生成相关文件。
 
 在终端执行以下命令，将创建`七年级第一课《春》`这篇文章的相关目录和文件：
 
@@ -167,7 +167,7 @@ diff-chs-textbooks/docs/7
 - `textbook-03.png` ： 教材`第三页`
 - `textbook-remark.png` ： 教材`注脚`页，通常是`第一页下部`（这张图片会被`original.md`引用）
 
-`textbook-.png`等文件，可以从语文教材PDF中获得。教材PDF可以从GitHub项目 **[ChinaTextbook](https://github.com/TapXWorld/ChinaTextbook)**下载，也可以去[国家中小学智慧教育平台](https://basic.smartedu.cn/tchMaterial)获取。
+`textbook-.png`等文件，可以从语文教材PDF中获得。教材PDF可以从GitHub项目 [ChinaTextbook](https://github.com/TapXWorld/ChinaTextbook)下载，也可以去[国家中小学智慧教育平台](https://basic.smartedu.cn/tchMaterial)获取。
 
 项目贡献者的**重要工作之一**是找到`原文`，制作图片，更新`assets`目录。
 
