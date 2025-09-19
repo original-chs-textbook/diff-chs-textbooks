@@ -229,9 +229,11 @@ diff-chs-textbooks/docs/7
 
 在**使用或引用本项目资源**时，你需要**说明**来自『**山高水落**』项目，并给出**项目URL**（或二维码）。
 
-【山高水落】URL: `https://original-chs-textbook.github.io/diff-chs-textbooks/`
+`山高水落`URL和二维码：
 
-![山高水落 QR CODE](/img/qr-code-url-240x240.png)
+`https://original-chs-textbook.github.io/diff-chs-textbooks/`
+
+![山高水落 QR CODE](./static/img/qr-code-url-240x240.png)
 
 本项目鼓励学习和交流，但请注意，任何将本项目内容用于商业目的、或进行二次传播和修改的行为，都可能存在侵犯著作权的风险。
 

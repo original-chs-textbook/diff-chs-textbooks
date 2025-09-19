@@ -51,6 +51,13 @@ slug: /
 一个人走得快，一群人走得远。
 ```
 
+## 〔原文vs课文对比〕完成列表
+
+- 👉 [七年级上册第1课〈春〉](/category/01春)
+- 👉 [七年级上册第2课〈济南的冬天〉](/category/02济南的冬天)
+- 👉 [七年级上册第3课〈雨的四季〉](/category/03雨的四季)
+- 施工中……
+
 ## 项目使用原则和免责声明
 
 ### 目的与性质
@@ -81,7 +88,9 @@ slug: /
 
 在**使用或引用本项目资源**时，你需要**说明**来自『**山高水落**』项目，并给出**项目URL**（或二维码）。
 
-【山高水落】URL: `https://original-chs-textbook.github.io/diff-chs-textbooks/`
+`山高水落`URL和二维码：
+
+`https://original-chs-textbook.github.io/diff-chs-textbooks/`
 
 ![山高水落 QR CODE](/img/qr-code-url-240x240.png)
 
