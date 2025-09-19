@@ -104,18 +104,19 @@ diff-chs-textbooks/docs
 ├── 5
 ├── 6
 ├── 7
-│   └── 1
-│       └── assets
+│   └── 1  # `1`为上册；`2`为下册
+│       └── 1 # 第`1`课
+│           └── assets # 存放截图
 ├── 8
 └── 9
 
 ```
 
-`1 ～ 9`各个目录下，分别存放`一年级 ～ 九年级`的相应文件；每个`年级目录`下，用数字`N`作为`目录名`来存放`第N课`的相关文件，上图的展示目录中，`N=1`，表示已经为`七年级`第`1`课创建了目录（1）、子目录（assets）。
+`1 ～ 9`各个目录下，分别存放`一年级 ～ 九年级`的相应文件；每个`年级目录`下，`目录名1`表示`上册`，`目录名2`表示`下册`；上下册的目录下，用数字`N`作为`目录名`来存放`第N课`的相关文件，上图展示的目录中，`N=1`，表示已经为`七年级上册`第`1`课创建了目录`1`、子目录`assets`。
 
 ### 用脚本自动创建课文目录
 
-下面以`七年级`第`1`课为例，介绍每篇课文相应`目录`的文件组织形式。
+下面以`七年级上册`第`1`课为例，介绍每篇课文相应`目录`的文件组织形式。
 
 我为项目编写了Python3脚本`bc_html2mdx.py`（感谢Gemini Pro 2.5的帮助）。若你是Windows用户，需要先安装Python3。该脚本能自动化创建`指定课文`的目录，并生成相关文件。
 
@@ -135,10 +136,10 @@ diff-chs-textbooks/docs
 
 ```
 
-生成的目录结构如下。其中，脚本在`1/assets/`目录下创建的png图片，都是字节为0的空文件，需要在后续进行相应替换。
+生成的目录结构如下。其中，脚本在`1/1/assets/`目录下创建的png图片，都是`字节为0`的`空文件`，以保证编译通过，需进行相应替换。
 
 ```
-diff-chs-textbooks/docs/7
+diff-chs-textbooks/docs/7/1/
 ├── 1
 │   ├── assets
 │   │   ├── original-cover.png
@@ -168,7 +169,7 @@ diff-chs-textbooks/docs/7
 - `textbook-03.png` ： 教材`第三页`
 - `textbook-remark.png` ： 教材`注脚`页，通常是`第一页下部`（这张图片会被`original.md`引用）
 
-`textbook-.png`等文件，可以从语文教材PDF中获得。教材PDF可以从GitHub项目 [ChinaTextbook](https://github.com/TapXWorld/ChinaTextbook)下载，也可以去[国家中小学智慧教育平台](https://basic.smartedu.cn/tchMaterial)获取。
+`textbook-??.png`等文件，可以从语文教材PDF中获得。教材PDF可以从GitHub项目 [ChinaTextbook](https://github.com/TapXWorld/ChinaTextbook)下载，也可以去[国家中小学智慧教育平台](https://basic.smartedu.cn/tchMaterial)获取。
 
 项目贡献者的**重要工作之一**是找到`原文`，制作图片，更新`assets`目录。
 
@@ -183,8 +184,10 @@ diff-chs-textbooks/docs/7
 
 另两个文件**可能**需要改动：
 
-- original.md： 当`原文`截图不是`两页`时，需要修改`original.md`，根据实际图片张数，增删`original-？.png`条目；
-- textbook.md： 当`课文`截图不是`三页`时，需要修改`textbook.md`，根据实际图片张数，增删`textbook-？.png`条目。
+- original.md： 当`原文`截图不是`两页`时，需要修改`original.md`，根据实际图片张数，增删`original-??.png`条目；
+- textbook.md： 当`课文`截图不是`三页`时，需要修改`textbook.md`，根据实际图片张数，增删`textbook-??.png`条目。
+
+（项目也采取将`original-cover.png`、`original-contents.png`和`original-publisher.png`三个PNG文件合并成一个JEPG`original-info.jpg`的方式，以节省存储空间）
 
 
 ### `七年级`上册第`1`课示例所生成的网页
