@@ -8,12 +8,21 @@ from pathlib import Path
 
 # --- 模板定义 ---
 
+CATEGORY_JSON_TPL_SEM = {
+    "label": "{sem}",
+    "position": "{semester}",
+    "link": {
+        "type": "generated-index",
+        "description": "〔{grade}年级〕语文（{sem}）"
+    }
+}
+
 CATEGORY_JSON_TPL = {
     "label": "{padded_number}.《{title}》",
     "position": "{number}",
     "link": {
         "type": "generated-index",
-        "description": "【{grade}】年级（统编版）语文第【{number}】课：〔原文〕和〔课文〕对比"
+        "description": "〔{grade}年级〕语文（{sem}）［第{number}课］：【原文】和【课文】对比"
     }
 }
 
@@ -24,7 +33,7 @@ sidebar_position: 1
 ---
 
 :::tip
-这是【{grade}】年级（统编版）语文第【{number}】课《{title}》原文的相关信息。
+这是〔{grade}年级〕语文（{sem}）［第{number}课］《{title}》的【原文】相关信息。
 :::
 
 ## 教材页脚备注
@@ -65,7 +74,7 @@ sidebar_position: 2
 ---
 
 :::tip
-这是【{grade}】年级（统编版）语文第【{number}】课的课文：《{title}》
+这是〔{grade}年级〕语文（{sem}）［第{number}课］的【课文】：《{title}》
 :::
 
 ## 课文
@@ -91,7 +100,7 @@ sidebar_position: 3
 ---
 
 :::tip
-这是【{grade}】年级（统编版）语文，第【{number}】课《{title}》原文和课文的对比。
+这是〔{grade}年级〕语文（{sem}）［第{number}课］《{title}》原文和课文的【对比】。
 :::
 
 export const MyComponent = () => (
@@ -173,7 +182,8 @@ def process_lesson_files(args):
         project_root = Path.cwd()
         print("警告：无法通过 __file__ 确定项目根目录，将使用当前工作目录。")
 
-    target_dir = project_root / 'docs' / str(args.grade) / str(args.number)
+    semester_dir = project_root / 'docs' / str(args.grade) / str(args.semester)
+    target_dir = semester_dir / str(args.number)
     print(f"项目根目录已确定: {project_root}")
     print(f"将在以下目录生成文件: {target_dir}")
 
@@ -181,17 +191,30 @@ def process_lesson_files(args):
     target_dir.mkdir(parents=True, exist_ok=True)
 
     # 3. 准备模板替换所需的数据
+    sem = "上册" if args.semester < 2 else "下册"
     template_data = {
         "grade": args.grade,
+        "semester": args.semester,
+        "sem": sem,
         "number": args.number,
         "title": args.title,
         "padded_number": f"{args.number:02d}"
     }
 
     # 4. 生成 _category_.json
+    category_data = CATEGORY_JSON_TPL_SEM.copy()
+    category_data['label'] = category_data['label'].format(**template_data)
+    category_data['position'] = int(category_data['position'].format(**template_data))
+    category_data['link']['description'] = category_data['link']['description'].format(**template_data)
+    category_path = semester_dir / '_category_.json'
+    with open(category_path, 'w', encoding='utf-8') as f:
+        # 使用 indent=2 美化JSON输出
+        json.dump(category_data, f, ensure_ascii=False, indent=2)
+    print(f"  -> 已生成: {category_path.relative_to(project_root)}")
+
     category_data = CATEGORY_JSON_TPL.copy()
     category_data['label'] = category_data['label'].format(**template_data)
-    category_data['position'] = category_data['position'].format(**template_data)
+    category_data['position'] = int(category_data['position'].format(**template_data))
     category_data['link']['description'] = category_data['link']['description'].format(**template_data)
     category_path = target_dir / '_category_.json'
     with open(category_path, 'w', encoding='utf-8') as f:
@@ -284,6 +307,10 @@ def main():
     parser.add_argument(
         "-g", "--grade", type=int, choices=range(1, 10),
         help="指定年级 (1-9)。当不使用 -o 时为必需。"
+    )
+    parser.add_argument(
+        "-s", "--semester", type=int, choices=range(1, 2),
+        help="指定学期 (1或2)。当不使用 -o 时为必需。"
     )
     parser.add_argument(
         "-n", "--number", type=int,
