@@ -178,17 +178,20 @@ diff-chs-textbooks/docs/7
 - diff.mdx： 对应`原文vs课文`网页
 
 
-通常，用户不需要更改`diff.mdx`文件。
+通常，参与者不需要更改`diff.mdx`文件，它是用`bc_html2mdx.py`脚本，从`BeyondCompare`生成的HTML格式的报告中，抽取`<table.*?>.*?</table>`标签内容生成的。
 
-当`原文`截图不是`两页`时，需要修改`original.md`，根据实际图片张数，增删`original-？.png`条目；
+另两个文件**可能**需要改动：
 
-当`课文`截图不是`三页`时，需要修改`textbook.md`，根据实际图片张数，增删`textbook-？.png`条目。
+- original.md： 当`原文`截图不是`两页`时，需要修改`original.md`，根据实际图片张数，增删`original-？.png`条目；
+- textbook.md： 当`课文`截图不是`三页`时，需要修改`textbook.md`，根据实际图片张数，增删`textbook-？.png`条目。
 
 
-### `七年级`第`1`课示例所生成的网页
+### `七年级`上册第`1`课示例所生成的网页
 
 可以用`bc_html2mdx.py`脚本创建好`1～9`年级所有课文的目录，但并没有这样做，而是完成了一篇原文和课文对比，网站左侧栏才出现相应的入口。
 
 在每个年级的左侧栏中，你会看见`“施工中，期待您的加入！”`的说明，这表明当前年级的工作尚未完成。
 
 ![about-docs-subdir](./static/img/about-docs-subdir.png)
+
+![about-docs-diff](./static/img/about-docs-diff.png)

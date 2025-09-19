@@ -125,11 +125,11 @@ ASSET_FILES = [
 ]
 
 HEADER_ROW = """
-  <tr className="SectionAll">
-    <td className="TextItemSigMod"><span className="TextSegSigDiff">左</span>侧为<span className="TextSegSigDiff">原</span>文</td>
-    <td className="AlignCenter">&lt;&gt;</td>
-    <td className="TextItemSigMod"><span className="TextSegSigDiff">右</span>侧为<span className="TextSegSigDiff">课</span>文</td>
-  </tr>"""
+    <tr className="AlignCenter">
+      <td className="HeaderItem"><span className="TextSegSigDiff">左</span>侧为<span className="TextSegSigDiff">原</span>文</td>
+      <td className="AlignCenter">&lt;&gt;</td>
+      <td className="HeaderItem"><span className="TextSegSigDiff">右</span>侧为<span className="TextSegSigDiff">课</span>文</td>
+    </tr>"""
 
 def extract_and_format_table(html_content: str) -> str | None:
     """从HTML内容中提取、格式化并添加表头的表格为JSX字符串。"""
