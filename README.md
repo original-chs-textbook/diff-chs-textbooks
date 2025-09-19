@@ -28,7 +28,7 @@
 
 ## 项目Logo
 
-![山高水落logo](./static/img/logo.png)
+![山高水落logo](./static/img/logo-on-baner.png)
 
 项目Logo名为`山水`，由项目发起人`吴尚智`设计，并用[Inkscape](https://inkscape.org/)制作完成。作者保留一切权利。
 

@@ -9,10 +9,10 @@ img.AutoScale { max-width: 100%; max-height: 100%; }
 .comparison-table td { vertical-align: top; padding-left: 4px; padding-right: 4px; }
 
 .comparison-table tr.SectionGap td { font-size: 4px; border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
-.comparison-table tr.SectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
-.comparison-table tr.SectionBegin td { border-left: none; border-top: none; border-right: 1px solid Black; }
-.comparison-table tr.SectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
-.comparison-table tr.SectionMiddle td { border-left: none; border-top: none; border-right: 1px solid Black; }
+.comparison-table tr.SectionAll td { border-left: 1px solid Black; border-top: 1px solid Black; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+.comparison-table tr.SectionBegin td { border-left: 1px solid Black; border-top: 1px solid Black; border-right: 1px solid Black; }
+.comparison-table tr.SectionEnd td { border-left: 1px solid Black; border-top: none; border-bottom: 1px solid Black; border-right: 1px solid Black; }
+.comparison-table tr.SectionMiddle td { border-left: 1px solid Black; border-top: none; border-right: 1px solid Black; }
 .comparison-table tr.SubsectionAll td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
 .comparison-table tr.SubsectionEnd td { border-left: none; border-top: none; border-bottom: 1px solid Gray; border-right: 1px solid Black; }
 .comparison-table.fc { border-top: 1px solid Black; border-left: 1px solid Black; width: 100%; font-family: monospace; font-size: 10pt; }
@@ -29,3 +29,5 @@ img.AutoScale { max-width: 100%; max-height: 100%; }
 .comparison-table td.TextItemInsigDel { color: #000000; background-color: #EEEEFF; text-decoration: line-through; }
 .comparison-table td.TextItemSigAdd { color: #000000; background-color: #FFE3E3; }
 .comparison-table td.TextItemSigDel { color: #000000; background-color: #FFE3E3; text-decoration: line-through; }
+
+.comparison-table td.HeaderItem { text-align: center; font-weight: 900; color: #000000; background-color: lightblue; }
