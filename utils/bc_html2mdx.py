@@ -54,24 +54,24 @@ sidebar_position: 1
 
 ### 封面
 
-![原文出处封面](./assets/original-cover.png)
+![原文出处封面](./assets/original-cover.jpg)
 
 ### 目录
 
-![原文书籍目录](./assets/original-contents.png)
+![原文书籍目录](./assets/original-contents.jpg)
 
 ### 出版社
 
-![原文出版社](./assets/original-publisher.png)
+![原文出版社](./assets/original-publisher.jpg)
 
 ## 原文截图
 
 ### 第〔1〕页
-![原文截图01](./assets/original-01.png)
+![原文截图01](./assets/original-01.jpg)
 
 ### 第〔2〕页
 
-![原文截图02](./assets/original-02.png)
+![原文截图02](./assets/original-02.jpg)
 
 """
 
@@ -137,11 +137,11 @@ export const MyComponent = () => (
 """
 
 ASSET_FILES = [
-    "original-cover.png",
-    "original-contents.png",
-    "original-publisher.png",
-    "original-01.png",
-    "original-02.png",
+    "original-cover.jpg",
+    "original-contents.jpg",
+    "original-publisher.jpg",
+    "original-01.jpg",
+    "original-02.jpg",
     "textbook-remark.png",
     "textbook-01.png",
     "textbook-02.png",
@@ -296,9 +296,14 @@ def generate_single_mdx(args):
             return
 
         # 为模板准备数据，grade 和 number 变为可选信息
+        if args.semester is not None:
+            sem = "上册" if args.semester < 2 else "下册"
+        else:
+            sem = '?'
         template_data = {
             "grade": args.grade or '?',
             "number": args.number or '?',
+            "sem": sem,
             "title": args.title,
             "table_content": table_content
         }
